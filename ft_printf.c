@@ -14,29 +14,31 @@
 
 int	ft_printf(const char *s, ...)
 {
+	size_t	i;
 	va_list	formats;
 
 	va_start(formats, s);
-
-	while(*s)
+	i = 0;
+	while(s[i])
 {
 	
 	if (s == '%c')
 	{
-		ft_putcharfd(va_arg(formats, char), 1);
+		ft_putchar(va_arg(formats, int));
 	}
 	else if (s == '%s')
 	{
-		ft_putstrfd(va_arg(formats, int), 1);
+		ft_putstr(va_arg(formats, int));
 	}
-	/*else if (s == '%p')
+	else if (s == '%p')
 	{
 		
 	}
 	else if (s == '%d')
 	{
 		
-	}*/
+	}
 }
+	return (i);
 	va_end(formats);
 }

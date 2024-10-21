@@ -12,15 +12,19 @@
 
 #include "libprintf.h"
 
-void	ft_putcharfd(char c, int fd)
+int	ft_putcharfd(char c)
 {
-	write(fd, c, 1);
+	write(1, c, 1);
+	return (1);
 }
 
-void	ft_putstrfd(char *s, int fd)
-{
-	while (*s++)
+int	ft_putstr(char *s)
+{	size_t	i;
+
+	i = 0;
+	while (s[i++])
 	{
-		write(fd, &s, 1);
+		write(1, &s, 1);
 	}
+	return (i);
 }
