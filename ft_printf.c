@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-20 17:11:33 by aassis-p          #+#    #+#             */
-/*   Updated: 2024-10-20 17:11:33 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/20 17:11:33 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/23 00:36:41 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_printf(const char *s, ...)
 	}
 	else if (s == '%p')
 	{
-		
+		ft_itoabase(va_arg(formats, int));	
 	}
 	else if (s == '%d')
 	{
