@@ -3,10 +3,11 @@ CCFLAGS = -Wall -Werror -Wextra
 NAME = libftprintf.a
 
 SRCS = ft_printf.c \
-		ft_itoa_base.c \
-		ft_putchar.c \
+		ft_printchar.c \
+		ft_printnbr.c \
 		ft_putstr.c \
-		ft_strlen.c \
+		ft_printper.c \
+		ft_printstr.c \
 
 
 OBJS = $(SRCS:.c=.o)

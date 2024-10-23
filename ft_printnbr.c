@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:32:55 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 02:07:04 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/23 16:48:00 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/23 17:01:22 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-void	ft_putchar(char c)
+int	printnbr(int n)
 {
-	write(1, &c, 1);
+	int		len;
+	char	*num;
+	
+	len = 0;
+	num = ft_itoaprintf(n);
+	len = ft_printstr(num);
+	free(num);
+	return (len);
 }

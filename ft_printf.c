@@ -6,13 +6,11 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:04:06 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 14:46:56 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 16:44:38 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
-
-int	ft_printchar(char c);
 
 int	ft_formats(va_list args, const char str)
 {
@@ -58,10 +56,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (len);
-}
-
-int	ft_printchar(char c)
-{
-	write(1, &c, 1);
-	return (1);
 }

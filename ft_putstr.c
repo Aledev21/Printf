@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libprintf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/20 17:09:06 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 17:04:32 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/21 17:33:52 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/23 16:47:56 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPRINTF_H
-# define LIBPRINTF_H
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
+#include "libprintf.h"
 
-int		ft_printf(const char *s, ...);
-int     ft_printchar(char c);
-void	ft_putstr(char *s);
-int		ft_printstr(char *str);
-int		ft_printper(void);
-int		printnbr(int n);
-char	*ft_itoaprintf(int n);
+void	ft_putstr(char *s)
+{	int	i;
 
-#endif
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+}
