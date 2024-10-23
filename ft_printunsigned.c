@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:49:14 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 18:52:26 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 20:38:51 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_num_len(unsigned	int num)
 	return (len);
 }
 
-static char	*ft_uitoa(unsigned int n)
+static char	*ft_itoapf(unsigned int n)
 {
 	char	*num;
 	int		len;
@@ -54,7 +54,7 @@ int	ft_printunsigned(unsigned int n)
 		print_length += write(1, "0", 1);
 	else
 	{
-		num = ft_uitoa(n);
+		num = ft_itoapf(n);
 		print_length += ft_printstr(num);
 		free(num);
 	}
