@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 17:09:06 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 17:04:32 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 19:33:46 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <stdint.h>
 
 int		ft_printf(const char *s, ...);
-int     ft_printchar(char c);
+int		ft_printchar(char c);
 void	ft_putstr(char *s);
 int		ft_printstr(char *str);
 int		ft_printper(void);
-int		printnbr(int n);
+int		ft_printnbr(int n);
 char	*ft_itoaprintf(int n);
+int		ft_printunsigned(unsigned int n);
+int		ft_printptr(unsigned long long ptr);
+int		ft_printhex(unsigned int num, const char format);
 
 #endif

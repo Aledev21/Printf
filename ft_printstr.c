@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:46:31 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 16:51:40 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 18:53:03 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	ft_printstr(char *str)
 {
 	int	i;
+
+	i = 0;
 	if (str == NULL)
 	{
 		ft_putstr("(nill)");

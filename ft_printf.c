@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:04:06 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 16:44:38 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 18:54:17 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_formats(va_list args, const char str)
 	else if (str == 's')
 		len += ft_printstr(va_arg(args, char *));
 	else if (str == 'p')
-		len += ft_printptr(va_arg(args, size_t));
+		len += ft_printptr(va_arg(args, unsigned long long));
 	else if (str == 'd' || str == 'i')
 		len += ft_printnbr(va_arg(args, int));
 	else if (str == 'u')
-		len += ft_printunsigned(va_arg(args, int));
+		len += ft_printunsigned(va_arg(args, unsigned int));
 	else if (str == 'x' || str == 'X')
 		len += ft_printhex(va_arg(args, unsigned int), str);
 	else if (str == '%')

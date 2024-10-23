@@ -6,13 +6,13 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:47:23 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 16:56:14 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 18:46:49 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int ft_printper(void)
+int	ft_printper(void)
 {
 	write(1, "%", 1);
 	return (1);

@@ -2,13 +2,16 @@ CC = cc
 CCFLAGS = -Wall -Werror -Wextra
 NAME = libftprintf.a
 
-SRCS = ft_printf.c \
+SRCS = ft_itoaprintf.c\
+		ft_printhex.c \
+		ft_printptr.c \
+		ft_putstr.c \
 		ft_printchar.c \
 		ft_printnbr.c \
-		ft_putstr.c \
-		ft_printper.c \
 		ft_printstr.c \
-
+		ft_printf.c \
+		ft_printper.c \
+		ft_printunsigned.c \
 
 OBJS = $(SRCS:.c=.o)
 
