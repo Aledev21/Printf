@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 17:09:06 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 00:34:40 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 01:21:19 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 int		ft_printf(const char *s, ...);
 void	ft_putcharfd(char c, int fd);
 void	ft_putstrfd(char *s, int fd);
-char    *itoa_base(void *hex, int base)
-
+char    *ft_itoa_base(void *hex, int base);
 
 #endif
