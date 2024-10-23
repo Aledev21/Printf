@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoabase.c                                      :+:      :+:    :+:   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 01:27:00 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 01:17:39 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/23 03:43:10 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ static int	int_len(size_t nbr)
 	}
 	while (nbr != 0)
 	{
-		nbr /= 10;
+		nbr = nbr / 10;
 		count++;
 	}
 	return (count);
 }
 
-int	itoa_base(void *hex, int base)
+char	*ft_itoa_base(void *hex, int base)
 {
 	size_t 	i;
 	size_t	digit;

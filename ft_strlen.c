@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printstr.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:33:52 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/21 17:34:56 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/23 01:37:40 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/23 01:38:42 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-int	ft_putstrfd(char *s)
-{	size_t	i;
+size_t	ft_strlen(const char *s)
+{
+	int	i;
 
 	i = 0;
-	while (s[i++])
+	while (s[i] != '\0')
 	{
-		write(1, &s, 1);
+		i++;
 	}
 	return (i);
 }
