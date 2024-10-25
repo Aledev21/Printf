@@ -17,7 +17,7 @@ static void	ft_putchar_fdd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-static int	ptrlen(uintptr_t num)
+static int	ptrlen(unsigned long long num)
 {
 	int	len;
 
@@ -30,7 +30,7 @@ static int	ptrlen(uintptr_t num)
 	return (len);
 }
 
-void	ft_convert(uintptr_t num)
+void	ft_convert(unsigned long long num)
 {
 	if (num >= 16)
 	{
@@ -46,17 +46,21 @@ void	ft_convert(uintptr_t num)
 	}
 }
 
-int	ft_printptr(unsigned long long ptr)
+int	ft_printptr(void *ptr)
 {
 	int	len;
+	unsigned long long	hexptr;
 
+	if (ptr == NULL)
+		return (write(1, "(nil)", 5));
+	hexptr = (unsigned long long)ptr;
 	len = 0;
 	len += write(1, "0x", 2);
-	if (ptr == 0)
+	if (hexptr == 0)
 		len += write(1, "0", 1);
 	else
 	{
-		ft_convert(ptr);
+		ft_convert(hexptr);
 		len += ptrlen(ptr);
 	}
 	return (len);

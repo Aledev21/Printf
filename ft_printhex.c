@@ -25,7 +25,7 @@ static int	ft_lenhex(unsigned int num)
 	while (num != 0)
 	{
 		len++;
-		num = num / 10;
+		num = num / 16;
 	}
 	return (len);
 }

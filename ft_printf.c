@@ -22,7 +22,7 @@ int	ft_formats(va_list args, const char str)
 	else if (str == 's')
 		len += ft_printstr(va_arg(args, char *));
 	else if (str == 'p')
-		len += ft_printptr(va_arg(args, unsigned long long));
+		len += ft_printptr(va_arg(args, void *));
 	else if (str == 'd' || str == 'i')
 		len += ft_printnbr(va_arg(args, int));
 	else if (str == 'u')
@@ -40,6 +40,8 @@ int	ft_printf(const char *str, ...)
 	va_list	args;
 	size_t	len;
 
+	if (str == 0)
+		return (-1);
 	i = 0;
 	len = 0;
 	va_start(args, str);

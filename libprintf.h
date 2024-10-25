@@ -25,7 +25,7 @@ int		ft_printper(void);
 int		ft_printnbr(int n);
 char	*ft_itoaprintf(int n);
 int		ft_printunsigned(unsigned int n);
-int		ft_printptr(unsigned long long ptr);
+int		ft_printptr(void *ptr);
 int		ft_printhex(unsigned int num, const char format);
 
 #endif

@@ -17,10 +17,9 @@ int	ft_printstr(char *str)
 	int	i;
 
 	i = 0;
-	if (str == NULL)
+	if (!str)
 	{
-		ft_putstr("(nill)");
-		return (6);
+		return (write(1, "(null)", 6));
 	}
 	while (str[i])
 	{
