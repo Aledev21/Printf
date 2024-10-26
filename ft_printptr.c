@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:04:52 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/23 20:06:44 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/25 19:00:49 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void	ft_convert(unsigned long long num)
 
 int	ft_printptr(void *ptr)
 {
-	int	len;
-	unsigned long long	hexptr;
+	unsigned int					len;
+	unsigned long long				hexptr;
 
 	if (ptr == NULL)
 		return (write(1, "(nil)", 5));
@@ -61,7 +61,7 @@ int	ft_printptr(void *ptr)
 	else
 	{
 		ft_convert(hexptr);
-		len += ptrlen(ptr);
+		len += ptrlen(hexptr);
 	}
 	return (len);
 }
